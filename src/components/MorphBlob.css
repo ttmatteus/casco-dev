@@ -1,0 +1,23 @@
+.morph-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.morph {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.morph path {
+  fill: #9aa472;
+  opacity: 0.3;
+}
+
+[data-high-contrast='true'] .morph-wrap {
+  display: none;
+}

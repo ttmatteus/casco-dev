@@ -1,0 +1,213 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--bg);
+}
+
+[data-high-contrast='true'] .hero {
+  background-image: none;
+}
+
+/* ---------- Organic background blobs (behind the portrait) ---------- */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob {
+  position: absolute;
+  display: block;
+}
+
+.blob-terracotta {
+  width: 360px;
+  height: 360px;
+  left: -140px;
+  bottom: -120px;
+  background: var(--accent);
+  opacity: 0.85;
+  border-radius: 42% 58% 60% 40% / 55% 48% 52% 45%;
+}
+
+.blob-sage {
+  width: 620px;
+  height: 620px;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--olive);
+  opacity: 0.4;
+  border-radius: 46% 54% 48% 52% / 52% 46% 54% 48%;
+}
+
+.blob-olive {
+  width: 320px;
+  height: 320px;
+  right: -80px;
+  top: -100px;
+  background: var(--accent-2);
+  opacity: 0.25;
+  border-radius: 50%;
+}
+
+[data-high-contrast='true'] .blob { display: none; }
+
+/* ---------- Full hero artwork (cream + character baked in) ---------- */
+.hero-portrait {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('/perfil.png');
+  background-repeat: no-repeat;
+  background-position: right 38%;
+  background-size: cover;
+  pointer-events: none;
+  will-change: transform, opacity;
+  /* estado inicial escondido pra evitar flash antes do GSAP */
+  opacity: 0;
+}
+
+[data-high-contrast='true'] .hero-portrait { display: none; }
+
+/* ---------- Social icons (left rail) ---------- */
+.hero-socials {
+  position: absolute;
+  left: 1.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero-socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: color 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.hero-socials a:hover,
+.hero-socials a:focus-visible {
+  color: var(--accent);
+  border-color: var(--border);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* ---------- Content (text on the left) ---------- */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-left: 4.5rem;
+}
+
+.hero-text {
+  max-width: 50%;
+  padding: 6rem 0;
+}
+
+.hero-iam {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.hero-name {
+  font-size: clamp(4.5rem, 13vw, 11rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0.2rem 0 0.6rem;
+  line-height: 0.92;
+}
+
+.hero-role {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 2.2vw, 1.7rem);
+  font-weight: 500;
+  color: var(--accent-2);
+  margin-bottom: 3rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.hero-tags span {
+  position: relative;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding-right: 1.25rem;
+}
+
+.hero-tags span:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero-portrait {
+    background-position: 72% center;
+    background-size: cover;
+    opacity: 0.28;
+  }
+
+  .hero-content {
+    padding-left: 0;
+    padding-top: 8rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .hero-tags { justify-content: center; }
+
+  .blob-sage {
+    width: 420px;
+    height: 420px;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 35%;
+  }
+
+  .hero-socials {
+    flex-direction: row;
+    left: 50%;
+    top: auto;
+    bottom: 1.25rem;
+    transform: translateX(-50%);
+  }
+}

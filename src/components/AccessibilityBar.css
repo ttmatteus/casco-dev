@@ -1,0 +1,36 @@
+.a11y-bar {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  gap: 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.35rem 0.6rem;
+  backdrop-filter: blur(12px);
+}
+
+.a11y-btn {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  padding: 0.25rem 0.5rem;
+  border-radius: 100px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1;
+}
+
+.a11y-btn:hover,
+.a11y-btn:focus-visible {
+  color: var(--text);
+  background: var(--border);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.a11y-btn.active {
+  color: var(--accent);
+}
