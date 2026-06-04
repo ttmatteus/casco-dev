@@ -72,7 +72,6 @@
   opacity: 0;
 }
 
-[data-high-contrast='true'] .hero-portrait { display: none; }
 
 /* ---------- Social icons (left rail) ---------- */
 .hero-socials {
