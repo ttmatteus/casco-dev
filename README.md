@@ -2,7 +2,8 @@
 
 Portfólio pessoal de desenvolvedor backend, desenvolvido como projeto acadêmico com foco em **acessibilidade** e **animações modernas**. A página apresenta perfil, formação, experiência, skills técnicas, idiomas, atividades e contato, num layout estilo currículo com identidade visual própria (paleta creme/terracota/oliva e fontes display customizadas).
 
-🔗 **Deploy:** _https://casco-dev.vercel.app
+🔗 **Deploy:** https://casco-dev.vercel.app
+💻 **Código:** https://github.com/ttmatteus/casco-dev
 
 ---
 
