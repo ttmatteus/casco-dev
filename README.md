@@ -56,8 +56,8 @@ Pré-requisitos: **Node.js 18+** e npm.
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/ttmatteus/<nome-do-repo>.git
-cd <nome-do-repo>
+git clone https://github.com/ttmatteus/casco-dev.git
+cd casco-dev
 
 # 2. Instalar as dependências
 npm install
