@@ -23,6 +23,8 @@ O projeto usa **três** bibliotecas de animação/manipulação de objetos, cada
 ### 1. GSAP (GreenSock Animation Platform) + ScrollTrigger
 Usada para as animações de entrada dos elementos. No carregamento, o nome e os textos do hero surgem com fade + deslize; a navbar desce suavemente. Com o **ScrollTrigger**, as seções (Educação, Experiência, Skills, etc.) revelam seu conteúdo conforme entram na viewport durante a rolagem. A imagem do hero também faz um fade-in suave via GSAP.
 
+**Feature — botão magnético:** o CTA "Entrar em contato" (footer) é puxado suavemente em direção ao cursor com `gsap.quickTo` (manipulação de objeto via GSAP, atualizando `transform`), implementada no hook reutilizável [`src/hooks/useMagnetic.ts`](src/hooks/useMagnetic.ts). Respeita `prefers-reduced-motion`.
+
 ### 2. Lenis
 Substitui o scroll nativo do navegador por uma rolagem **suavizada por interpolação** (`lerp`), deixando a navegação mais fluida. Está integrada ao GSAP (via `gsap.ticker` e `ScrollTrigger.update`) para que as animações de scroll fiquem sincronizadas com a posição real da página. Também é usada para o **scroll suave ao clicar** nos links da navbar (Sobre / Skills / Contato).
 
