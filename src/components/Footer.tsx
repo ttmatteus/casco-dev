@@ -1,6 +1,9 @@
 import './Footer.css'
+import { useMagnetic } from '../hooks/useMagnetic'
 
 export default function Footer() {
+  const ctaRef = useMagnetic<HTMLAnchorElement>(0.5)
+
   return (
     <footer id="contact" className="footer" role="contentinfo">
       <div className="container footer-inner">
@@ -12,6 +15,7 @@ export default function Footer() {
             e uma execução melhor ainda.
           </h2>
           <a
+            ref={ctaRef}
             href="mailto:matteusgn@gmail.com"
             className="btn-primary footer-btn"
             aria-label="Enviar e-mail para matteusgn@gmail.com"
