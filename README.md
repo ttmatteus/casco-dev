@@ -2,8 +2,7 @@
 
 Portfólio pessoal de desenvolvedor backend, desenvolvido como projeto acadêmico com foco em **acessibilidade** e **animações modernas**. A página apresenta perfil, formação, experiência, skills técnicas, idiomas, atividades e contato, num layout estilo currículo com identidade visual própria (paleta creme/terracota/oliva e fontes display customizadas).
 
-🔗 **Deploy:** _[adicionar link aqui após o deploy]_
-💻 **Código:** https://github.com/ttmatteus/_[nome-do-repo]_
+🔗 **Deploy:** _https://casco-dev.vercel.app
 
 ---
 
@@ -60,8 +59,8 @@ Pré-requisitos: **Node.js 18+** e npm.
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/ttmatteus/<nome-do-repo>.git
-cd <nome-do-repo>
+git clone https://github.com/ttmatteus/casco-dev.git
+cd casco-dev
 
 # 2. Instalar as dependências
 npm install
